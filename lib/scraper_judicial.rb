@@ -1,0 +1,5 @@
+require 'mechanize'
+require 'scraper_judicial/version'
+require 'scraper_judicial/scraper'
+require 'scraper_judicial/expediente'
+require 'scraper_judicial/scrapers/jalisco'

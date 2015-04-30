@@ -1,4 +1,4 @@
-module BuzonLegal
+module ScraperJudicial
   class Expediente
     attr_accessor :expediente, :juicio, :actores, :acuerdo
 

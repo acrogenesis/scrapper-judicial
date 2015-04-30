@@ -1,15 +1,14 @@
-require 'mechanize'
-require_relative 'expediente'
-module BuzonLegal
-  class Scrapper
-    attr_accessor :page, :expedientes
+module ScraperJudicial
+  class Scraper
+    attr_accessor :page, :expedientes, :url, :date
     def initialize(args)
-      self.page = Mechanize.new.get(args[:url])
+      fail 'Tienes que especificar un url' if url.nil?
+      self.page = Mechanize.new.get(url)
       self.date = args[:date] || (Date.today - 1).strftime('%d-%m-%Y')
       self.expedientes = []
     end
 
-    def expedientes
+    def scrap
       fail 'Tienes que implementar el metodo expedientes'
     end
   end
