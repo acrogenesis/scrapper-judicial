@@ -10,7 +10,7 @@ module ScraperJudicial
       form['data[Boletin][txtbusqueda]'] = date
       form['data[Boletin][tipo]'] = 1
       options = form.fields[2].options
-      options.each do |option|
+      options.each do |option| # Itera los juzgados
         form['data[Boletin][juzgado]'] = option.value
         puts "Procesando: #{option.text}"
         data = form.submit
