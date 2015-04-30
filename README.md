@@ -1,38 +1,35 @@
 # ScraperJudicial
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/scraper_judicial`. To experiment with that code, run `bin/console` for an interactive prompt.
+Scrapper de Boletines Judiciales en México.
+Soportados:
+- Jalisco
 
-TODO: Delete this and the text above, and describe your gem
+## Instalación
 
-## Installation
-
-Add this line to your application's Gemfile:
+Agrega esta linea en tu Gemfile:
 
 ```ruby
 gem 'scraper_judicial'
 ```
 
-And then execute:
+Correo:
 
     $ bundle
 
-Or install it yourself as:
+O instalalo tu mismo:
 
     $ gem install scraper_judicial
 
-## Usage
+## Uso
 
-TODO: Write usage instructions here
+```ruby
+j = ScraperJudicial::Jalisco.new # Crea Objeto
+j.scrap # regresa un arreglo de expedientes
+```
 
-## Development
+## Contribuye
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release` to create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-1. Fork it ( https://github.com/[my-github-username]/scraper_judicial/fork )
+1. Fork it ( https://github.com/acrogenesis/scraper_judicial/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
