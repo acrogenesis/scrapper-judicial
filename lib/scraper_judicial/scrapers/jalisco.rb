@@ -20,7 +20,7 @@ module ScraperJudicial
         dls.each do |dl|
           dd = dl.search('dd')
           self.expedientes << Expediente.new(expediente: dd[0].content.strip, juicio: dd[1].content.strip,
-                                        actores: dd[2].content.strip, acuerdo: dd[3].content.strip)
+                                             actores: dd[2].content.strip, acuerdo: dd[3].content.strip)
         end
       end
     end
